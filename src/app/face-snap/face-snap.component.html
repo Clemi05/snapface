@@ -3,5 +3,8 @@
   <p>Published on {{ createdDate }}</p>
   <img [src]="imageUrl" [alt]="title" srcset="">
   <p>{{ description }}</p>
-  <p>Snaps: {{ snaps }}</p>
+  <p>
+    <button (click)="onAddSnap()">Oh Snaps!</button>
+    Snaps: {{ snaps }}
+  </p>
 </div>

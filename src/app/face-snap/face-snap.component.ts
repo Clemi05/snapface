@@ -19,4 +19,8 @@ export class FaceSnapComponent implements OnInit {
     this.snaps = 4;
     this.imageUrl = "https://i.picsum.photos/id/261/200/200.jpg?hmac=4mNici_jSM7rVZzJL7M6G24f0axnDV3BZR-LBo5gMIg";
   }
+
+  onAddSnap() {
+    this.snaps++;
+  }
 }
