@@ -12,7 +12,6 @@ export class FaceSnapComponent implements OnInit {
   snaps!: number;
   imageUrl!: string;
   buttonText! : string;
-  snapped!: boolean;
 
   ngOnInit() {
     this.title = "Sahara Dune";
@@ -21,17 +20,14 @@ export class FaceSnapComponent implements OnInit {
     this.snaps = 4;
     this.imageUrl = "https://i.picsum.photos/id/261/200/200.jpg?hmac=4mNici_jSM7rVZzJL7M6G24f0axnDV3BZR-LBo5gMIg";
     this.buttonText = "Oh Snap!"
-    this.snapped = false;
   }
 
   onSnap() {
-    if (this.snapped === false) {
+    if (this.buttonText === "Oh Snap!") {
       this.snaps++;
-      this.snapped = true;
       this.buttonText = "Oops Snap!"
     } else {
       this.snaps--;
-      this.snapped = false;
       this.buttonText = "Oh Snap!"
     }
   }
